@@ -24,12 +24,13 @@ app = FastAPI()
 #     password: str
 
 
-@app.post("/")
-async def root(user: Request):
-    # print(user['user'], user['password'])
-    res = await user.json()
-    return res
-
+@app.post("/go")
+async def getInformation(info : Request):
+    req_info = await info.json()
+    return {
+        "status" : "SUCCESS",
+        "data" : req_info
+    }
 @app.get("/lol")
 async def root():
     return {"hahaha"}
