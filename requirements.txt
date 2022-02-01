@@ -1,0 +1,8 @@
+aiogram
+asyncio
+fastapi
+selenium
+uvicorn
+requests
+pydantic
+gunicorn
