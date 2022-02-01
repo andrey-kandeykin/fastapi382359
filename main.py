@@ -24,7 +24,7 @@ app = FastAPI()
 #     password: str
 
 
-@app.post("/go")
+@app.get("/go")
 async def getInformation(info : Request):
     req_info = await info.json()
     return {
